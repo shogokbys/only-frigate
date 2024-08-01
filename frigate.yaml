@@ -51,12 +51,14 @@ data:
         - car
         - bicycle
 
-    # events:
-      # pre_capture: 5
-      # post_capture: 5
-      # retain:
-        # default: 10
-        # mode: all
+    record:
+      enabled: False
+      events:
+        pre_capture: 5
+        post_capture: 5
+        retain:
+          default: 10
+          mode: all
         
     cameras:
       front_road:
@@ -82,7 +84,7 @@ spec:
     metadata:
       labels:
         app: frigate
-        app.kubernetes.io/version: "0.0.8"
+        app.kubernetes.io/version: "0.0.10"
     spec:
       containers:
         - name: frigate
