@@ -48,8 +48,8 @@ data:
     objects:
       track:
         - person
-        - car
-        - bicycle
+        # - car
+        # - bicycle
 
     record:
       enabled: False
@@ -84,7 +84,7 @@ spec:
     metadata:
       labels:
         app: frigate
-        app.kubernetes.io/version: "0.0.10"
+        app.kubernetes.io/version: "0.0.1"
     spec:
       containers:
         - name: frigate
