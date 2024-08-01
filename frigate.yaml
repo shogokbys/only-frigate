@@ -37,6 +37,12 @@ data:
     detectors:
       cpu1:
         type: cpu
+    detect:
+      fps: 5
+      enabled: True
+      stationary:
+        interval: 50
+        threshold: 50
 
     objects:
       track:
@@ -44,6 +50,13 @@ data:
         - car
         - bicycle
 
+    events:
+      pre_capture: 5
+      post_capture: 5
+      retain:
+        default: 10
+        mode: all
+        
     cameras:
       front_road:
         ffmpeg:
