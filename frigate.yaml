@@ -38,11 +38,17 @@ data:
       cpu1:
         type: cpu
 
+    objects:
+      track:
+        - person
+        - car
+        - bicycle
+
     cameras:
       front_road:
         ffmpeg:
           inputs:
-            - path: rtsp://vmware:VMware1!@192.168.50.211:554/stream2
+            - path: rtsp://vmware:VMware1!@192.168.50.211:554/stream1
               roles:
                 - detect
                 - rtmp
@@ -62,7 +68,7 @@ spec:
     metadata:
       labels:
         app: frigate
-        app.kubernetes.io/version: "0.0.4"
+        app.kubernetes.io/version: "0.0.5"
     spec:
       containers:
         - name: frigate
