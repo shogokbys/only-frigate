@@ -37,6 +37,7 @@ data:
     detectors:
       cpu1:
         type: cpu
+        
     detect:
       fps: 5
       enabled: True
@@ -81,7 +82,7 @@ spec:
     metadata:
       labels:
         app: frigate
-        app.kubernetes.io/version: "0.0.6"
+        app.kubernetes.io/version: "0.0.7"
     spec:
       containers:
         - name: frigate
